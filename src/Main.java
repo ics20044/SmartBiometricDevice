@@ -1,11 +1,11 @@
 
+
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
 		// TODO Auto-generated method stub
 		
-		System.out.println("Hi");
-
+		new smartwatch_window();
 	}
 
 }
