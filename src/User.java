@@ -8,6 +8,14 @@ public class User {
 	private ArrayList<Metric> listOfAllTimeMetrics = new ArrayList<Metric>();
 	private ArrayList<String> homePhoneNumbers = new ArrayList<String>();
 	
+	/*Constructor of User*/
+	public User(String f, String s, String a)
+	{
+		firstName = f;
+		surname = s;
+		amka = a;
+		
+	}
 	
 	/*Add a measurement to the list of measurements recorded for the individual.*/
 	public void addMetric(Metric theMetrci) {

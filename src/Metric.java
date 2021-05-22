@@ -6,7 +6,7 @@ public class Metric {
 	private double diastolicPressure;
 	private double heartBeats;
 	private double bodyTemperature;
-	
+    private User user;
 	private String situationOfTheMetric; // "good", "medium", "dangerous"
 
 }
