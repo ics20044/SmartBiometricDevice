@@ -30,5 +30,16 @@ public class User {
 			homePhoneNumbers.add(theNumber);
 		}
 	}
+	
+	public void informForSituation(Metric controllMetric){
+		if(controllMetric.getSituationOfTheMetric() == "medium")
+		{
+			sendNotification.SendingSMSToHisHomes();
+		}
+		else if(controllMetric.getSituationOfTheMetric() == "dangarous")
+		{
+		//	sendNotification.sendGmailToTheManagementCenter(, , , , ); prepei na baloume times
+		}
+	}
 
 }
