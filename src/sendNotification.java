@@ -14,10 +14,6 @@ import javax.mail.internet.MimeMessage;
 
 public class sendNotification {
 	
-    private static String USER_NAME = "itintelligenceuom";  //The email of the person who wears the smartwatch and whose life is in danger
-    private static String PASSWORD = "ITintelligence2001"; // Gmail password
-    private static String RECIPIENT = "An Email"; //We define the center as the recipient which will manage all the notifications.
-	
     
     /*This is a method that will alert the center 
      * that the person wearing the smartwatch that sends the alert is in danger.*/
@@ -52,6 +48,7 @@ public class sendNotification {
             Transport transport = session.getTransport("smtp");
             transport.connect(host, from, pass);
             transport.sendMessage(message, message.getAllRecipients());
+            System.out.println("Notification sended!");
             transport.close();
         }
         catch (AddressException ae) {
@@ -69,8 +66,8 @@ public class sendNotification {
 		try {
 			// Construct data
 			String apiKey = "apikey=" + "YzQ3MjkxZjIyMjcyMTEyMjRlM2U1ODkwMjQ3YzQ4MmY="; //API key
-			String message = "&message=" + "Your phone is hacked";
-			String sender = "&sender=" + "Auto Messager";
+			String message = "&message=" + "";
+			String sender = "&sender=" + "Παροχή Βοηθείας";
 			String numbers = "&numbers=" + "6971657008";
 			
 			// Send data

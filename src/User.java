@@ -31,14 +31,20 @@ public class User {
 		}
 	}
 	
-	public void informForSituation(Metric controllMetric){
-		if(controllMetric.getSituationOfTheMetric() == "medium")
-		{
+	
+	public void informForSituation(String situation){
+		
+		if(situation.equalsIgnoreCase("medium")) {
 			sendNotification.SendingSMSToHisHomes();
 		}
-		else if(controllMetric.getSituationOfTheMetric() == "dangarous")
-		{
-		//	sendNotification.sendGmailToTheManagementCenter(, , , , ); prepei na baloume times
+		else if(situation.equalsIgnoreCase("dangerous")) {
+			String message = "";
+			
+			String [] recievers = new String [1];
+			recievers[0] = "ics20072@uom.edu.gr";
+			
+			message = firstName+" "+surname+", with  A.M.K.A: "+amka+"\n"+"Location: ....";
+			sendNotification.sendGmailToTheManagementCenter("itintelligenceuom@gmail.com", "ITintelligence2001", recievers, "’τομο κινδυνεύει", message);
 		}
 	}
 
