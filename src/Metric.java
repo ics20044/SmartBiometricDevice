@@ -79,15 +79,6 @@ public class Metric {
 			 return situationOfTheMetric;
 		 }
 		 
-		 /*if(sumMedium>=1)
-		 {
-			 situationOfTheMetric = "medium";	 
-		 }
-		 else
-		 {
-			 situationOfTheMetric = "good";
-		 }*/
-		 
 		 if(sumForMedium>=20) {
 			 sumForMedium = 0;
 			 return "medium";

@@ -66,9 +66,9 @@ public class sendNotification {
 		try {
 			// Construct data
 			String apiKey = "apikey=" + "YzQ3MjkxZjIyMjcyMTEyMjRlM2U1ODkwMjQ3YzQ4MmY="; //API key
-			String message = "&message=" + "";
+			String message = "&message=" + "Τα στοιχεία του ατόμου, μαζί με την ακριβή τοποθεσία του";
 			String sender = "&sender=" + "Παροχή Βοηθείας";
-			String numbers = "&numbers=" + "6971657008";
+			String numbers = "&numbers=" + "Οι τηλεφωνικοι αριθμοί των οικείων που θα δεχτούν το μήνυμα";
 			
 			// Send data
 			HttpURLConnection conn = (HttpURLConnection) new URL("https://api.txtlocal.com/send/?").openConnection();

@@ -41,7 +41,7 @@ public class User {
 			String message = "";
 			
 			String [] recievers = new String [1];
-			recievers[0] = "ics20044@uom.edu.gr";
+			recievers[0] = "ics20044@uom.edu.gr"; //email of the government agency that will receive its notifications.
 			
 			message = firstName+" "+surname+", with  A.M.K.A: "+amka+"\n"+"Location: ....";
 			sendNotification.sendGmailToTheManagementCenter("itintelligenceuom@gmail.com", "ITintelligence2001", recievers, "’τομο κινδυνεύει", message);

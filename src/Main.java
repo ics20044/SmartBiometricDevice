@@ -7,7 +7,7 @@ public class Main {
 		
 		//new smartwatch_window();
 		
-		User testUser = new User("Minas", "Charakopoulos","3213123");
+		User testUser = new User("Name", "Surname","amka");
 		
 		//Indicative measurements for the test. Normally we will accept them one by one every minute.
 		ArrayList<Metric> listOfMetrics = new ArrayList<Metric>();
