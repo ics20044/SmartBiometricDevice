@@ -2,10 +2,11 @@ import java.util.ArrayList;
 
 public class Metric {
 	
-	private double oxygenMeasurement; //Normal values: 94-100 (%)  Moderate values: 81-93  Dangerous values: <=80
+	private double oxygenMeasurement; 
 	private double systolicPressure;
 	private double diastolicPressure;
 	private double heartBeats;
+	private double meanArterialPresure;
 	private String situationOfTheMetric; // "good", "medium", "dangerous"
 	private int sumForMedium = 0; //In the 20 consecutive moderate measurements, the relatives of the person are notified.
 
@@ -14,6 +15,7 @@ public class Metric {
 	 //This method is the constructor of Metric.
 	 public Metric(double o, double s, double d, double h)
 	 {
+		 meanArterialPresure = (s + 2.0*d)/3.0;
 		 oxygenMeasurement = o;
 		 systolicPressure = s;
 		 diastolicPressure = d;
@@ -50,8 +52,6 @@ public class Metric {
 			 situationOfTheMetric = "dangerous";
 			 return situationOfTheMetric;
 		 }
-		 
-		 double meanArterialPresure = (systolicPressure + 2*diastolicPressure)/3;
 		 if(meanArterialPresure<7)
 		 {
 			 situationOfTheMetric = "dangerous";
@@ -89,5 +89,56 @@ public class Metric {
 	 
 	 
 	 public String getSituationOfTheMetric() { return situationOfTheMetric;}
-	 
+
+	public double getOxygenMeasurement() {
+		return oxygenMeasurement;
+	}
+
+	public void setOxygenMeasurement(double oxygenMeasurement) {
+		this.oxygenMeasurement = oxygenMeasurement;
+	}
+
+	public double getSystolicPressure() {
+		return systolicPressure;
+	}
+
+	public void setSystolicPressure(double systolicPressure) {
+		this.systolicPressure = systolicPressure;
+	}
+
+	public double getDiastolicPressure() {
+		return diastolicPressure;
+	}
+
+	public void setDiastolicPressure(double diastolicPressure) {
+		this.diastolicPressure = diastolicPressure;
+	}
+
+	public double getHeartBeats() {
+		return heartBeats;
+	}
+
+	public void setHeartBeats(double heartBeats) {
+		this.heartBeats = heartBeats;
+	}
+
+	public int getSumForMedium() {
+		return sumForMedium;
+	}
+
+	public void setSumForMedium(int sumForMedium) {
+		this.sumForMedium = sumForMedium;
+	}
+
+	public void setSituationOfTheMetric(String situationOfTheMetric) {
+		this.situationOfTheMetric = situationOfTheMetric;
+	}
+
+	public double getMeanArterialPresure() {
+		return meanArterialPresure;
+	}
+
+	public void setMeanArterialPresure(double meanArterialPresure) {
+		this.meanArterialPresure = meanArterialPresure;
+	} 
 }

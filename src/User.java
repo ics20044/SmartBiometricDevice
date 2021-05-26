@@ -32,7 +32,7 @@ public class User {
 	}
 	
 	
-	public void informForSituation(String situation){
+	public void informForSituation(String situation, Metric theMetric){
 		
 		if(situation.equalsIgnoreCase("medium")) {
 			sendNotification.SendingSMSToHisHomes();
@@ -41,9 +41,11 @@ public class User {
 			String message = "";
 			
 			String [] recievers = new String [1];
-			recievers[0] = "ics20044@uom.edu.gr"; //email of the government agency that will receive its notifications.
+			recievers[0] = "m.charakopoulos@gmail.com"; //email of the government agency that will receive its notifications.
 			
-			message = firstName+" "+surname+", with  A.M.K.A: "+amka+"\n"+"Location: ....";
+			message = firstName+" "+surname+", with  A.M.K.A: "+amka+"\n"+"Location: ...."+"\n\n"+"Oxygen Measurement: "+theMetric.getOxygenMeasurement()+"\n"+
+			"Systolic Pressure: "+theMetric.getSystolicPressure()+"\n"+"Mean Arterial Presure: "+theMetric.getMeanArterialPresure()+"\n"+"Heart Beats: "+theMetric.getHeartBeats();
+
 			sendNotification.sendGmailToTheManagementCenter("itintelligenceuom@gmail.com", "ITintelligence2001", recievers, "’τομο κινδυνεύει", message);
 		}
 	}

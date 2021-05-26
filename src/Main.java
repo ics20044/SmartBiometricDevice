@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Main {
@@ -11,10 +12,10 @@ public class Main {
 		
 		//Indicative measurements for the test. Normally we will accept them one by one every minute.
 		ArrayList<Metric> listOfMetrics = new ArrayList<Metric>();
-		Metric metric1 = new Metric(90.0, 12.0, 13.0, 62.0);
-		Metric metric2 = new Metric(90.0, 12.0, 13.0, 62.0);
-		Metric metric3 = new Metric(90.0, 12.0, 13.0, 300.0);
-		Metric metric4 = new Metric(90.0, 12.0, 13.0, 62.0);
+		Metric metric1 = new Metric(95.0, 12.0, 11.0, 64.0); //Good
+		Metric metric2 = new Metric(93.5, 12.5, 12.0, 85.0); //Medium
+		Metric metric3 = new Metric(88.0, 18.0, 5.4, 123.0); //Dangerous
+		Metric metric4 = new Metric(91.0, 11.7, 8.1, 62.0); //Medium
 		
 		listOfMetrics.add(metric1);
 		listOfMetrics.add(metric2);
@@ -26,7 +27,7 @@ public class Main {
 				for(Metric theMetric: listOfMetrics) {
 					testUser.addMetric(theMetric);
 					String situation = theMetric.estimateSituationofMetric();
-					testUser.informForSituation(situation);
+					testUser.informForSituation(situation, theMetric);
 					Thread.sleep(5*1000); //60*1000 for the minute
 				}
 				break;
