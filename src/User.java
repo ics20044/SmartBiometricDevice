@@ -46,7 +46,7 @@ public class User {
 			message = firstName+" "+surname+", with  A.M.K.A: "+amka+"\n"+"Location: ...."+"\n\n"+"Oxygen Measurement: "+theMetric.getOxygenMeasurement()+"\n"+
 			"Systolic Pressure: "+theMetric.getSystolicPressure()+"\n"+"Mean Arterial Presure: "+theMetric.getMeanArterialPresure()+"\n"+"Heart Beats: "+theMetric.getHeartBeats();
 
-			sendNotification.sendGmailToTheManagementCenter("itintelligenceuom@gmail.com", "ITintelligence2001", recievers, "’τομο κινδυνεύει", message);
+			sendNotification.sendGmailToTheManagementCenter("itintelligenceuom@gmail.com", "semderPassword", recievers, "’τομο κινδυνεύει", message);
 		}
 	}
 
